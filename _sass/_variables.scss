@@ -3,10 +3,22 @@
 // VARIABLES
 //
 
-// Colors
+// Light Mode (Default)
+$background-light: #ffffff;
+$text-light: #333;
+$link-light: #007acc;
+
+// Dark Mode
+$background-dark: #001212;
+$text-dark: #fff9;
+$link-dark: #007acc;
+
+// Dark Gold Theme
+// dark gold text
+$dg-text: #b08d57;
+
 $blue: #4183C4;
 
-// Grays
 $black: #000;
 $darkerGray: #222;
 $darkGray: #333;
@@ -14,14 +26,13 @@ $gray: #666;
 $lightGray: #eee;
 $white: #fff;
 
-// Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
-// Mobile breakpoints
 @mixin mobile {
   @media screen and (max-width: 640px) {
     @content;
   }
 }
+

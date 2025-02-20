@@ -4,7 +4,6 @@
 //
 // IMPORTS
 //
-
 @import "reset";
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
@@ -13,14 +12,43 @@
 /* BASE RULES */
 /**************/
 
+:root {
+  --background-color: #{$background-light};
+  --text-color: #{$text-light};
+  --link-color: #{$link-light};
+  --dark-gold: #{$dg-text};
+}
+
+.dark-mode {
+  --background-color: #{$background-dark};
+  --text-color: #{$text-dark};
+  --link-color: #{$link-dark};
+  --dark-gold: #{$dg-text};
+}
+
+
 html {
   font-size: 100%;
+  background: var(--background-color);
 }
 
 body {
-	background: $white;
+	background: var(--background-color);
   font: 18px/1.4 $helvetica;
-  color: $darkGray;
+  color: var(--text-color);
+}
+
+
+a {
+  color: var(--link-color);
+}
+
+pre, code {
+  background-color: var(--background-color);
+}
+
+.hihglight {
+  background-color: var(--background-color);
 }
 
 .container {
@@ -32,7 +60,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: var(--dark-gold);
   font-weight: bold;
 
   line-height: 1.7;
@@ -122,11 +150,11 @@ img {
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
+  color: var(--text-color);
   background: $lightGray;
 }
 ::selection {
-  color: $black;
+  color: var(--text-color);
   background: $lightGray;
 }
 
@@ -256,7 +284,7 @@ nav {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
-    color: $gray;
+    color: var(--text-color);
     font-size: 22px;
     font-style: italic;
   }
@@ -275,7 +303,7 @@ nav {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  background-color: var(--background-color);
 }
 
 footer {
@@ -283,7 +311,5 @@ footer {
   text-align: center;
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
