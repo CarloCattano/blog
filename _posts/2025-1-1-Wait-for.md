@@ -7,7 +7,7 @@ title: "Wait for it"
 <!-- ![_config.yml]({{ site.baseurl }}/images/image.jpg) -->
 <img src="{{ site.baseurl }}/images/image.jpg" alt="Image" width="300" height="auto">
 
-> While I was waiting for a build to finish while having to update and install some package today I had renewed appetite for automation.
+> While I was waiting for long build to finish while having to update and install some other packages right after it. Today I had a renewed appetite for automation.
 
 A queue of sorts. Imagine you need to compile this really big project that takes ages
 to finish. And right after you should do another repetitive job or run a test, and you dont want to be around to wait for _both_ commands or more.

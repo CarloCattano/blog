@@ -40,7 +40,7 @@ body {
 	background: var(--background-color);
 	font-family: $georgia;
 	line-height: 1.4;	
-	font-size: 0.8rem;
+	font-size: 1.2rem;
   	color: var(--text-color);
 }
 
@@ -110,6 +110,8 @@ h4 {
 
 p {
   margin: 15px 0;
+  text-indent: 1.2em;
+  font-size: 0.8rem;
 }
 
 a {
@@ -297,11 +299,12 @@ nav {
 
 .post {
   blockquote {
-    margin: 1.8em .8em;
+    margin-left: 0.8rem;
+    margin-top: 4px;
     border-left: 2px solid $gray;
-    padding: 0.1em 1em;
+    padding: 3px 7px 6px 9px;
     color: brighten((--text-color), 40%);
-    font-size: 22px;
+    font-size: 0.6rem;
     font-style: italic;
   }
 
