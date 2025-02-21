@@ -67,7 +67,7 @@ Group=root
 
 <br>
 
-osquery service runs as root at boot and its writeable by my user...
+[osquery service](https://www.osquery.io/) runs as ```root``` at boot and its writeable by my user...
 
 So I proceed with the most logical step, adding my user to the sudoers file
 
