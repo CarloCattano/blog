@@ -9,6 +9,9 @@
   <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.ico">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
@@ -45,8 +48,8 @@
   <div class="wrapper-footer">
     <div class="container">
       <footer class="footer">
-        {% include svg-icons.html %} 
-		<button onclick="toggleDarkMode()">🌙</button>
+        {% include svg-icons.html %}
+        <button onclick="toggleDarkMode()">🌙</button>
       </footer>
     </div>
   </div>
@@ -56,11 +59,11 @@
 
   <script>
 
-	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		document.body.classList.toggle("dark-mode");
-		localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
-		document.body.classList.add("dark-mode");
-	}
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+      document.body.classList.add("dark-mode");
+    }
 
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
