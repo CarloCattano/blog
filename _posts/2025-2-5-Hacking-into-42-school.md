@@ -46,7 +46,7 @@ Suddenly I came accross a good list of find commands to search for files with sp
 
 
 ```bash
-find / -type f ! -user $(whoami) -perm -u=w 2>/dev/null    
+find / -writable ! -user \`whoami\` -type f ! -path "/proc/*" ! -path "/sys/*" -exec ls -al {} \; 2>/dev/null
 ```
 <br>
 
