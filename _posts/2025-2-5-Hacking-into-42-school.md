@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "priviledge escalation at 42 Berlin"
+title: "privilege escalation at 42 Berlin"
 ---
 ### _Climbing in Berlin_
 
