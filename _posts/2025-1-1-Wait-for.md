@@ -2,26 +2,30 @@
 layout: post
 title: "Wait for it"
 ---
-### _I dont like to_ *wait* _for *petty PIDS!*_
+### _I'm not *waiting* for_ **petty PID's!**
 
-<!-- ![_config.yml]({{ site.baseurl }}/images/config.png) -->
+<!-- ![_config.yml]({{ site.baseurl }}/images/image.jpg) -->
+<img src="{{ site.baseurl }}/images/image.jpg" alt="Image" width="300" height="auto">
 
-Today I remembered that pidof is a thing. 
-    
-  I was trying to write a script that would wait for a command to finish and then run another 
-command. Then I remembered that `pidof` is a thing. It that takes a process name and returns the PID of that process.
-So I wrote a few bash lines as a test.
+> While I was waiting for a build to finish while having to update and install some package today I had renewed appetite for automation.
 
+A queue of sorts. Imagine you need to compile this really big project that takes ages
+to finish. And right after you should do another repetitive job or run a test, and you dont want to be around to wait for _both_ commands or more.
+
+
+Then I remembered that ```pidof``` is a thing. It that takes a process name and returns the PID of that process.
 
 ```bash
-while true; do if ! pidof $awaitedcmd > /dev/null; then echo "your other command"; fi; sleep 1; done
+do if ! pidof $awaitedcmd;
+then echo "your other command"; 
 ```
 
 for those moments when you must wait for a command to finish before running another command, and you want to _ensure_ 
 that the first command has successfully finished before running the second command.
+And unlike using ```echo first && echo second``` , it can be run from any other terminal and after the process has already triggered.
 
 the key here is ```do if !``` pidof N . It will return true if the process is not running. So we can do some 
-sane error checking in favour of, _hopefully_, omnipotentcy (??) and peace of mind.
+sane error checking in favour of, _hopefully_, idempotency (??) and peace of mind.
 
 
 ```bash
