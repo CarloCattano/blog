@@ -42,18 +42,21 @@ didn't know how to use ```git mergetool``` inside neovim properly yet, and neede
 > I will find you
 
 
-Suddenly I came accross a good list of find commands to search for files with specific permissions.
+Suddenly I came accross a [good list of find commands](https://github.com/sujayadkesar/Linux-Privilege-Escalation?tab=readme-ov-file#writable-files)
+to search for files with specific permissions.
 
 
 ```bash
+
 find / -writable ! -user \`whoami\` -type f ! -path "/proc/*" ! -path "/sys/*" -exec ls -al {} \; 2>/dev/null
+
 ```
 <br>
 
 Find all the files that I'm not an owner of, and can be written into by my user.
 
 
-One of the most interesting files as see it'a a .service file, so a systemd daemon. Huh! I'm familiar with services :-)
+One of the most interesting files I see it's a .service file, so a systemd daemon. Huh! I'm familiar with services :-)
 <br>
 
 `/usr/lib/systemd/system/osqueryd.service`
