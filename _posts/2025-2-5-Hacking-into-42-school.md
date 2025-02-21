@@ -14,7 +14,7 @@ Firefox wouldn't start, VScode either. And so my morning began.
 _Hacking_ or trying to find vulnerabilities at 42 School's its encouraged and even rewarded, but my previous attempts had been fruitless when it was
 _just for fun_. This time, however, It was personal.
 I was in a hurry to get my project done and lately the old storage system we had at that time was making the machines unresponsive sporadically.
-
+<br>
 
 > Can you hack my ex's facebook account?
 
@@ -44,7 +44,6 @@ didn't know how to use ```git mergetool``` inside neovim properly yet, and neede
 
 Suddenly, I came accross a [good list of find commands](https://github.com/sujayadkesar/Linux-Privilege-Escalation?tab=readme-ov-file#writable-files)
 to search for files with specific permissions.
-
 In there a very specific one caught my eye:
 
 
@@ -57,7 +56,6 @@ find / -writable ! -user \`whoami\` -type f ! -path "/proc/*" ! -path "/sys/*" -
 
 Find all the files that I'm not an owner of, and can be written into by my user.
 The rest is just ignoring the system files that are not relevant and piping the error output to /dev/null in order to keep the output clean.
-
 
 One of the most interesting files I see it's a .service file, meaning a systemd daemon. Huh! I'm familiar with those :-)
 <br>

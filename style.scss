@@ -31,14 +31,19 @@
 }
 
 
+
 html {
   font-size: 100%;
   background: var(--background-color);
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  margin: 0;
+  padding: 0;
 	background: var(--background-color);
-	font-family: $georgia;
+  font-family: Verdana, sans-serif;
 	line-height: 1.4;	
 	font-size: 1.2rem;
   	color: var(--text-color);
@@ -49,6 +54,11 @@ code, pre, .highlight {
   font-size: 10px;
   font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
   background-color: var(--foreground-color);
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  margin-left: 30px;
 }
 
 a {
@@ -66,7 +76,7 @@ span {
 
 .container {
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 86%;
   padding: 0 10px;
   width: 100%;
 
@@ -104,7 +114,7 @@ h2 {
 
 h3 {
   font-size: 20px;
-  color: darken($dg-text, 10%);
+  color: $dg-text;
 }
 
 h4 {
@@ -113,11 +123,12 @@ h4 {
 }
 
 p {
-  margin: 15px 0;
-  text-indent: 1.2em;
+  margin: 15px;
+  text-indent: 20px;
   font-size: 0.8rem;
+  margin-top: 1.5em;
   @include mobile {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -278,7 +289,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: var(--link-color);
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
@@ -313,6 +324,8 @@ nav {
     color: brighten((--text-color), 40%);
     font-size: 0.6rem;
     font-style: italic;
+
+
   }
 
   .comments {

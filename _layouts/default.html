@@ -8,13 +8,15 @@
 
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.ico">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
     href="{{ site.baseurl }}/feed.xml" />
+
 </head>
 
 <body>
+
   <div class="wrapper-masthead">
     <div class="container">
       <header class="masthead clearfix">
@@ -27,7 +29,8 @@
 
         <nav>
           <a href="{{ site.baseurl }}/">Blog</a>
-          <a href="{{ site.baseurl }}/about">About</a>
+          <a href="https://ktano-studio.com/blogo?from=blog">Home</a>
+          <button onclick="toggleDarkMode()"> 🌙</button>
         </nav>
       </header>
 
@@ -39,16 +42,18 @@
     {{ content }}
   </div>
 
+  <br>
   <div class="wrapper-footer">
     <div class="container">
       <footer class="footer">
         {% include svg-icons.html %}
-        <button onclick="toggleDarkMode()">🌙</button>
       </footer>
     </div>
   </div>
 
-  {% include analytics.html %}
+  <!-- {% include analytics.html %} -->
+  <br>
+  <br>
 
 
   <script>
@@ -69,6 +74,10 @@
         document.body.classList.add("dark-mode");
       }
     };
+
+    // make dark mode default
+    document.body.classList.add("dark-mode");
+
   </script>
 </body>
 
