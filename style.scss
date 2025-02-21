@@ -69,8 +69,11 @@ span {
   max-width: 80%;
   padding: 0 10px;
   width: 100%;
-}
 
+  @include mobile {
+    max-width: 96%;
+  }
+}
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -84,6 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 
   @include mobile {
     line-height: 1.4;
+    font-size: 1.5em;
   }
 }
 
@@ -112,6 +116,9 @@ p {
   margin: 15px 0;
   text-indent: 1.2em;
   font-size: 0.8rem;
+  @include mobile {
+    font-size: 1rem;
+  }
 }
 
 a {
