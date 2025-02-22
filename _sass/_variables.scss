@@ -19,9 +19,7 @@ $foreground-dark: #333333;
 // dark gold text
 $dg-text: #D3BC13;
 
-
 $background: $background-dark;
-
 
 $blue: #4183C4;
 
@@ -35,10 +33,4 @@ $white: #fff;
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
-
-@mixin mobile {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
-}
 

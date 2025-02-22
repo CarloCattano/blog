@@ -1,4 +1,7 @@
 
+// use mixins
+@use "mixins" as *;
+
 .highlight {
   
   background: none;
@@ -14,7 +17,8 @@
     word-wrap: normal;
 
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    background-color: scale-color($background, $lightness: 2%); 
+    background-color: var(--foreground-color);
+    
     @include mobile {
       max-width: 92%;
     }

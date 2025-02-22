@@ -4,15 +4,17 @@
 //
 // IMPORTS
 //
-@import "reset";
-@import "variables";
-@import "highlights";
+@use "variables" as *; // Use `as *` if you don't want to namespace variables
+@use "reset";
+@use "highlights";
+@use "svg-icons";
 
-
+// sass colors
+@use "sass:color";
 
 // Syntax highlighting @import is at the bottom of this file
 
-
+@use "mixins" as *;
 
 /**************/
 /* BASE RULES */
@@ -80,7 +82,7 @@ span {
 	font-size: inherit;
 }
 
-.hihglight {
+.highlight {
   background-color: var(--background-color);
 }
 
@@ -128,8 +130,7 @@ h2 {
 
 h3 {
   font-size: 22px;
-  color: scale-color($dg-text, $lightness: -20%);
-
+  color: color.scale($dg-text, $lightness: -10%)
 }
 
 h4 {
@@ -142,6 +143,7 @@ p {
   text-indent: 20px;
   font-size: 1.3rem;
   margin-top: 1.5em;
+
   code {
     font-size: 1.24rem;
     border-radius: 8px;
@@ -155,7 +157,7 @@ a {
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: brighten(var(--link-color), 10%);
+    color: color.scale($dg-text, $lightness: 20%);
   }
 }
 
@@ -369,4 +371,3 @@ footer {
   text-align: center;
 }
 
-@import "svg-icons";
