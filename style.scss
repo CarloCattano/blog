@@ -14,11 +14,7 @@
 /**************/
 
 :root {
-  --background-color: #{$background-light};
-  --text-color: #{$text-light};
-  --link-color: #{$link-light};
-  --dark-gold: #{$dg-text};
-  --foreground-color: #{$foreground-light};
+
 }
 
 .dark-mode {
@@ -28,7 +24,6 @@
   --dark-gold: #{$dg-text};
   --foreground-color: #{$foreground-dark};
 }
-
 
 
 html {
@@ -56,7 +51,6 @@ code {
   @include mobile {
     font-size: 1.1rem;
   }
-
 }
 
 button {
@@ -135,6 +129,7 @@ p {
   text-indent: 20px;
   font-size: 1.3rem;
   margin-top: 1.5em;
+  
   code {
     font-size: 1.24rem;
     border-radius: 8px;
@@ -147,6 +142,7 @@ a {
   color: var(--link-color);
   text-decoration: none;
 	cursor: pointer;
+  
   &:hover, &:active {
     color: brighten(var(--link-color), 10%);
   }
