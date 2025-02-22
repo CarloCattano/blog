@@ -1,7 +1,5 @@
 ---
 ---
-
-
 @use "svg-icons";
 @use "sass:color";
 @use "reset";
@@ -14,11 +12,11 @@
 /**************/
 
 :root {
-  --background-color: #{$background-light};
-  --text-color: #{$text-light};
-  --link-color: #{$link-light};
-  --dark-gold: #{$dg-text};
-  --foreground-color: #{$foreground-light};
+  --background-color: $background-light;
+  --text-color: $text-light;
+  --link-color: $link-light;
+  --dark-gold: $dg-text;
+  --foreground-color: $foreground-light;
 }
 
 .dark-mode {
