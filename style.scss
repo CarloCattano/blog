@@ -1,18 +1,13 @@
 ---
 ---
 
-//
-// IMPORTS
-//
-@import "reset";
-@import "variables";
-@import "highlights";
 
+@use "svg-icons";
+@use "sass:color";
+@use "reset";
 
-
-// Syntax highlighting @import is at the bottom of this file
-
-
+@forward "highlights";
+@use "variables" as *;
 
 /**************/
 /* BASE RULES */
@@ -128,8 +123,7 @@ h2 {
 
 h3 {
   font-size: 22px;
-  color: scale-color($dg-text, $lightness: -20%);
-
+  color: color.scale($dg-text, $lightness: -20%);
 }
 
 h4 {
@@ -369,4 +363,3 @@ footer {
   text-align: center;
 }
 
-@import "svg-icons";
