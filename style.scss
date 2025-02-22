@@ -84,6 +84,7 @@ span {
   max-width: 94%;
   padding: 0 10px;
   width: 100%;
+  max-width: 90%;
 
   @include mobile {
     max-width: 96%;
@@ -136,6 +137,7 @@ p {
   text-indent: 20px;
   font-size: 1.3rem;
   margin-top: 1.5em;
+
   code {
     font-size: 1.24rem;
     border-radius: 8px;
