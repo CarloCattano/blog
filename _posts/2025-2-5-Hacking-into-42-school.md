@@ -48,9 +48,7 @@ In there a very specific one caught my eye:
 
 
 ```bash
-
 find / -writable ! -user \`whoami\` -type f ! -path "/proc/*" ! -path "/sys/*" -exec ls -al {} \; 2>/dev/null
-
 ```
 <br>
 

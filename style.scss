@@ -8,7 +8,11 @@
 @import "variables";
 @import "highlights";
 
+
+
 // Syntax highlighting @import is at the bottom of this file
+
+
 
 /**************/
 /* BASE RULES */
@@ -45,7 +49,7 @@ body {
 	background: var(--background-color);
   font-family: Verdana, sans-serif;
 	line-height: 1.4;	
-	font-size: 1.2rem;
+	font-size: 1.1rem;
   	color: var(--text-color);
 }
 
@@ -57,7 +61,7 @@ code {
   margin: auto;
 
   @include mobile {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
 
 }
@@ -103,24 +107,29 @@ h1, h2, h3, h4, h5, h6 {
 
   @include mobile {
     line-height: 1.4;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 32px;
   a {
     color: var(--text-color);
+  }
+
+  @include mobile {
+    font-size: 26px;
   }
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 h3 {
-  font-size: 24px;
-  color: $dg-text;
+  font-size: 22px;
+  color: scale-color($dg-text, $lightness: -20%);
+
 }
 
 h4 {
@@ -131,17 +140,13 @@ h4 {
 p {
   margin: 15px;
   text-indent: 20px;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-top: 1.5em;
   code {
-    font-size: 1.2rem;
+    font-size: 1.24rem;
     border-radius: 8px;
     padding: 0.2em 0.4em;
     background-color: var(--foreground-color);
-  }
-
-  @include mobile {
-    font-size: 1.3rem;
   }
 }
 
