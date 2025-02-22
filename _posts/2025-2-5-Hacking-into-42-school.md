@@ -83,17 +83,15 @@ ExecStartPre=/bin/sh -c "echo 'ccattano   ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoe
 ```
 _Showing only the relevant parts of the file._
 
-<br>
+
 
 On the next reboot, my user would be appended and get sudo privileges.
 
 ```bash
-root	 ALL=(ALL) ALL
-bocal    ALL=(ALL) NOPASSWD: ALL
-ccattano ALL=(ALL) NOPASSWD: ALL
+root        ALL=(ALL) ALL
+bocal       ALL=(ALL) NOPASSWD: ALL
+ccattano    ALL=(ALL) NOPASSWD: ALL
 ```
-
-<br>
 
 ---
 
@@ -104,7 +102,7 @@ ccattano ALL=(ALL) NOPASSWD: ALL
 
 > I'm in
 
-<img src="{{ site.baseurl }}/images/imin.png" alt="Image" width="400" height="auto" />
+<img src="{{ site.baseurl }}/images/imin.png" alt="Image" width="500" height="auto" />
 
 <br>
 
@@ -114,7 +112,7 @@ Contacted the school's staff to report the vulnerability minutes later.
 
 > hearts for you, [stars](https://github.com/CarloCattano?tab=repositories&q=&type=public&language=&sort=) for me
 
-<img src="{{ site.baseurl }}/images/washere.jpg" alt="Image" width="400" height="auto">
+<img src="{{ site.baseurl }}/images/washere.jpg" alt="Image" width="500" height="auto">
 
 _It has been over 1.5 years since I found this in June 2023, giving the 42 network more than enough time to fix the vulnerability._
 
