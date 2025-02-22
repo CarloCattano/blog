@@ -34,8 +34,8 @@ sane error checking in favour of, _hopefully_, idempotency (??) and peace of min
 set -e
 
 target_pid=$1
-shift  
-command="$@"  
+shift
+command="$@"
 
 if ! [[ $target_pid =~ ^[0-9]+$ ]]; then
     echo "Wrong PID provided"
@@ -61,11 +61,10 @@ eval "$command"
 SUCCESS=$?
 
 if [ $SUCCESS -eq 0 ]; then
-    echo "Process $target_pid has finished"
+    echo "Process $target_pid has finished and executed successfully"
     exit 0
 else
-    echo "Process $target_pid has finished"
+    echo "Process $target_pid has finished but command failed"
     exit 1
 fi
-
 ```
