@@ -1,14 +1,13 @@
 ---
 ---
 
-@use "mixins" as *;
 //
 // IMPORTS
 //
 @import "reset";
 @import "variables";
 @import "highlights";
-
+@import "mixins";
 /**************/
 /* BASE RULES */
 /**************/
