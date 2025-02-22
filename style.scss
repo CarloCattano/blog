@@ -7,7 +7,7 @@
 @import "reset";
 @import "variables";
 @import "highlights";
-@import "mixins";
+
 /**************/
 /* BASE RULES */
 /**************/
@@ -33,18 +33,16 @@
 html {
   font-size: 100%;
   background: var(--background-color);
-  margin: 0;
-  padding: 0;
+  overscroll-behavior: none;
 }
 
 body {
-  margin: 0;
-  padding: 0;
 	background: var(--background-color);
   font-family: Verdana, sans-serif;
 	line-height: 1.4;	
 	font-size: 1.1rem;
-  	color: var(--text-color);
+  color: var(--text-color);
+  overscroll-behavior: none;
 }
 
 code {
