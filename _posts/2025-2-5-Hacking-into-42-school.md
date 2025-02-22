@@ -58,7 +58,9 @@ The rest is just ignoring the system files that are not relevant and piping the 
 One of the most interesting files I see it's a .service file, meaning a systemd daemon. Huh! I'm familiar with those :-)
 <br>
 
-`/usr/lib/systemd/system/osqueryd.service`
+```bash
+/usr/lib/systemd/system/osqueryd.service
+```
 
 When I glance into it, *Big* surprise, 
 
